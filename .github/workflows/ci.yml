@@ -1,0 +1,28 @@
+name: Build and Push Docker Image to GitHub Container Registry
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Login to GitHub Container Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Get the tag name
+        run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
+      - name: Unpack src directory
+        run: tar -xJf src.tar.xz
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t ghcr.io/${{ github.repository }}/aws-eb-cli:${{ env.TAG_NAME }} .
+          docker push ghcr.io/${{ github.repository }}/aws-eb-cli:${{ env.TAG_NAME }}
