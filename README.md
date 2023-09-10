@@ -12,7 +12,7 @@ This repository provides a Docker image to run the AWS Elastic Beanstalk Command
 
 To use this Docker image in a GitHub Actions workflow, you can add a step in your `.github/workflows/main.yml` as shown below:
 
-\```yaml
+```yaml
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,9 +24,7 @@ jobs:
       uses: docker://ghcr.io/vitr-docker-images/aws-eb-cli:3.14.13
       with:
         args: "deploy"
-\```
-
-Replace `tag` with the desired image tag.
+```
 
 ### Local Usage
 
@@ -34,13 +32,13 @@ To use the image locally, you can follow these steps:
 
 1. Pull the image from GitHub Container Registry:
 
-    \```bash
+    ```bash
     docker pull ghcr.io/your-github-username/your-image-name:tag
-    \```
+    ```
 
 2. Run a container using this image:
 
-    \```bash
+    ```bash
     docker run --rm ghcr.io/vitr-docker-images/aws-eb-cli:3.14.13 --version
-    \```
+    ```
 
