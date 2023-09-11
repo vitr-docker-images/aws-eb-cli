@@ -42,3 +42,8 @@ To use the image locally, you can follow these steps:
     docker run --rm ghcr.io/vitr-docker-images/aws-eb-cli:3.14.13 --version
     ```
 
+## Motivation
+
+:fire: :computer: **If you got AWS EB CLI to work, hats off to you!** :tophat: :clap:  
+:hotel: **Your next stop?** A spa day to find your lost Zen. :massage:  
+:tea: **Or, at the very least, brew a strong cup of chamomile tea.** Your nerves will thank you! :relieved:
