@@ -1,6 +1,6 @@
 # Docker Image for AWS Elastic Beanstalk CLI
 
-[![GHCR-Badges](https://ghcr-badge.egpl.dev/vitr-docker-images/aws-eb-cli/aws-eb-cli/tags?color=%2344cc11&amp;ignore=latest&amp;n=3&amp;label=image+tags&amp;trim=)](https://ghcr-badge.egpl.dev/)
+[![GHCR-Badges](https://ghcr-badge.egpl.dev/vitr-docker-images/aws-eb-cli/tags?color=%2344cc11&amp;ignore=latest&amp;n=3&amp;label=image+tags&amp;trim=)](https://ghcr-badge.egpl.dev/)
 
 ## Description
 
